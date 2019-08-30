@@ -62,7 +62,7 @@
 			children = (
 				287AEE6D23191EE70095E437 /* AppDelegate.swift */,
 				287AEE6F23191EE70095E437 /* ViewController.swift */,
-				CB73A8CF2319278F0037915E /* New Group */,
+				CB73A8CF2319278F0037915E /* Networking */,
 				287AEE7123191EE70095E437 /* Main.storyboard */,
 				287AEE7423191EE80095E437 /* Assets.xcassets */,
 				287AEE7623191EE80095E437 /* LaunchScreen.storyboard */,
@@ -71,14 +71,14 @@
 			path = GreenR;
 			sourceTree = "<group>";
 		};
-		CB73A8CF2319278F0037915E /* New Group */ = {
+		CB73A8CF2319278F0037915E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				CB73A8D0231927960037915E /* URLSession+Additions.swift */,
 				CB73A8CD231922160037915E /* Networking.swift */,
 				CB73A8D42319296F0037915E /* Device.swift */,
 			);
-			path = "New Group";
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -32,7 +32,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="jTK-A6-DP1"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="DashIcon" id="jTK-A6-DP1">
+                        <color key="badgeColor" red="0.96187049150000004" green="0.7546556592" blue="0.29789817330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1029" y="84"/>
@@ -58,7 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h53-G2-bhg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Controls" id="7sC-O6-gn5"/>
+                    <tabBarItem key="tabBarItem" title="Controls" image="ControlIcon" id="7sC-O6-gn5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dn5-h5-tMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,4 +141,8 @@
             <point key="canvasLocation" x="2161" y="-687"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ControlIcon" width="25" height="25"/>
+        <image name="DashIcon" width="25" height="25"/>
+    </resources>
 </document>

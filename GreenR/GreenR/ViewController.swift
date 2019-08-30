@@ -95,18 +95,5 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    func turnDevice(isOn: Bool) {
-        print("toggling device  power")
-        network.turnDevice(isOn: isOn) { result in
-            switch result {
-            case .success(let device):
-                print(device)
-            case .failure(_):
-                print("Error toggling power at \(Date())")
-            }
-        }
-    }
-    
 }
 

@@ -12,4 +12,5 @@ class Device: Decodable {
     let name: String
     let power: Float
     let isOn: Bool
+    let powerUsed: Int
 }

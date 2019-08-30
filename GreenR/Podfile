@@ -1,0 +1,3 @@
+target 'GreenR' do
+  pod 'Charts'
+end

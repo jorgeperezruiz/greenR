@@ -64,9 +64,9 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-nr-Fap">
-                                <rect key="frame" x="29" y="556" width="352" height="113"/>
+                                <rect key="frame" x="29" y="494" width="352" height="285"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="113" id="s6E-nF-9fE"/>
+                                    <constraint firstAttribute="height" constant="285" id="s6E-nF-9fE"/>
                                 </constraints>
                                 <connections>
                                     <action selector="acTapped:" destination="6Ah-kQ-gni" eventType="touchUpInside" id="u4g-5W-sXp"/>
@@ -79,7 +79,7 @@
                             <constraint firstItem="Tgh-9A-0EF" firstAttribute="leading" secondItem="h53-G2-bhg" secondAttribute="leading" id="1Lo-68-Ocj"/>
                             <constraint firstItem="mo3-nr-Fap" firstAttribute="leading" secondItem="h53-G2-bhg" secondAttribute="leading" constant="29" id="SYt-Qh-mnw"/>
                             <constraint firstItem="h53-G2-bhg" firstAttribute="trailing" secondItem="mo3-nr-Fap" secondAttribute="trailing" constant="33" id="TM3-NJ-V2R"/>
-                            <constraint firstItem="h53-G2-bhg" firstAttribute="bottom" secondItem="mo3-nr-Fap" secondAttribute="bottom" constant="144" id="VCr-eB-5Qe"/>
+                            <constraint firstItem="h53-G2-bhg" firstAttribute="bottom" secondItem="mo3-nr-Fap" secondAttribute="bottom" constant="34" id="VCr-eB-5Qe"/>
                             <constraint firstItem="Tgh-9A-0EF" firstAttribute="top" secondItem="h53-G2-bhg" secondAttribute="top" id="gZY-pk-wmF"/>
                             <constraint firstItem="h53-G2-bhg" firstAttribute="bottom" secondItem="Tgh-9A-0EF" secondAttribute="bottom" id="wcV-hY-SbJ"/>
                         </constraints>

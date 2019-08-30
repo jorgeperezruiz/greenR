@@ -55,7 +55,7 @@
         <!--Controls-->
         <scene sceneID="UL1-be-dN5">
             <objects>
-                <viewController id="6Ah-kQ-gni" sceneMemberID="viewController">
+                <viewController id="6Ah-kQ-gni" customClass="ControlsViewController" customModule="GreenR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tE6-UV-a9E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,17 +63,32 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="controls2" translatesAutoresizingMaskIntoConstraints="NO" id="Tgh-9A-0EF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-nr-Fap">
+                                <rect key="frame" x="29" y="556" width="352" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="s6E-nF-9fE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="acTapped:" destination="6Ah-kQ-gni" eventType="touchUpInside" id="u4g-5W-sXp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87450980392156863" green="0.96078431372549022" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="h53-G2-bhg" firstAttribute="trailing" secondItem="Tgh-9A-0EF" secondAttribute="trailing" id="0Rz-iy-2lO"/>
                             <constraint firstItem="Tgh-9A-0EF" firstAttribute="leading" secondItem="h53-G2-bhg" secondAttribute="leading" id="1Lo-68-Ocj"/>
+                            <constraint firstItem="mo3-nr-Fap" firstAttribute="leading" secondItem="h53-G2-bhg" secondAttribute="leading" constant="29" id="SYt-Qh-mnw"/>
+                            <constraint firstItem="h53-G2-bhg" firstAttribute="trailing" secondItem="mo3-nr-Fap" secondAttribute="trailing" constant="33" id="TM3-NJ-V2R"/>
+                            <constraint firstItem="h53-G2-bhg" firstAttribute="bottom" secondItem="mo3-nr-Fap" secondAttribute="bottom" constant="144" id="VCr-eB-5Qe"/>
                             <constraint firstItem="Tgh-9A-0EF" firstAttribute="top" secondItem="h53-G2-bhg" secondAttribute="top" id="gZY-pk-wmF"/>
                             <constraint firstItem="h53-G2-bhg" firstAttribute="bottom" secondItem="Tgh-9A-0EF" secondAttribute="bottom" id="wcV-hY-SbJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h53-G2-bhg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Controls" image="ic_av_timer_24px" id="7sC-O6-gn5"/>
+                    <connections>
+                        <outlet property="acButton" destination="mo3-nr-Fap" id="XNf-hX-IY8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dn5-h5-tMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

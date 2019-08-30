@@ -10,7 +10,7 @@ import Foundation
 
 typealias CompletionClosure = (Result<(URLResponse, Data), Error>) -> Void
 typealias DeviceClosure = (NetworkingResult<Device>) -> Void
-typealias PowerOnClosure = (NetworkingResult<Bool>) -> Void
+typealias PowerOnClosure = (NetworkingResult<Device>) -> Void
 
 enum NetworkingError: Error {
     case networkError
@@ -66,7 +66,7 @@ class Networking: NetworkingContract {
     
     
     func turnDevice(isOn: Bool, onCompletion: @escaping PowerOnClosure) {
-        let pathComponents = deviceComponent + "/fan"
+        let pathComponents = deviceComponent + "/Fan"
         let endpoint = baseURL.appendingPathComponent(pathComponents)
         
         let headers = ["Content-Type": "application/json"]
@@ -81,8 +81,8 @@ class Networking: NetworkingContract {
             switch result {
             case .success(_, let data):
                 do {
-                    let success = try JSONDecoder().decode(Bool.self, from: data) //Data Type to be determined
-                    onCompletion(.success(success))
+                    let device = try JSONDecoder().decode(Device.self, from: data) //Data Type to be determined
+                    onCompletion(.success(device))
                 } catch {
                     onCompletion(.failure(.decodeFail))
                 }

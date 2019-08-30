@@ -12,9 +12,11 @@
 		287AEE7323191EE70095E437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7123191EE70095E437 /* Main.storyboard */; };
 		287AEE7523191EE80095E437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7423191EE80095E437 /* Assets.xcassets */; };
 		287AEE7823191EE80095E437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7623191EE80095E437 /* LaunchScreen.storyboard */; };
+		29D9312B2B8FC6D0AF8DE2A5 /* libPods-GreenR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E151AC9EB5A02398731C373 /* libPods-GreenR.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19655F76F90013D614FB2DD3 /* Pods-GreenR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenR.release.xcconfig"; path = "Target Support Files/Pods-GreenR/Pods-GreenR.release.xcconfig"; sourceTree = "<group>"; };
 		287AEE6A23191EE70095E437 /* GreenR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287AEE6D23191EE70095E437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287AEE6F23191EE70095E437 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		287AEE7423191EE80095E437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287AEE7723191EE80095E437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		287AEE7923191EE80095E437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E151AC9EB5A02398731C373 /* libPods-GreenR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GreenR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B6B0CE9B79BB3680E784627 /* Pods-GreenR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenR.debug.xcconfig"; path = "Target Support Files/Pods-GreenR/Pods-GreenR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D9312B2B8FC6D0AF8DE2A5 /* libPods-GreenR.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				287AEE6C23191EE70095E437 /* GreenR */,
 				287AEE6B23191EE70095E437 /* Products */,
+				DBB9D4DB0B753ED2055454B9 /* Pods */,
+				9275EC30754FFEFA5EDFBA91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = GreenR;
 			sourceTree = "<group>";
 		};
+		9275EC30754FFEFA5EDFBA91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E151AC9EB5A02398731C373 /* libPods-GreenR.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBB9D4DB0B753ED2055454B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B6B0CE9B79BB3680E784627 /* Pods-GreenR.debug.xcconfig */,
+				19655F76F90013D614FB2DD3 /* Pods-GreenR.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287AEE7C23191EE80095E437 /* Build configuration list for PBXNativeTarget "GreenR" */;
 			buildPhases = (
+				92331E588C7A712F7A2FE550 /* [CP] Check Pods Manifest.lock */,
 				287AEE6623191EE70095E437 /* Sources */,
 				287AEE6723191EE70095E437 /* Frameworks */,
 				287AEE6823191EE70095E437 /* Resources */,
+				42F3B0DF8D510B3682106CA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42F3B0DF8D510B3682106CA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenR/Pods-GreenR-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenR/Pods-GreenR-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreenR/Pods-GreenR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92331E588C7A712F7A2FE550 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		287AEE6623191EE70095E437 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		287AEE7D23191EE80095E437 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B6B0CE9B79BB3680E784627 /* Pods-GreenR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		287AEE7E23191EE80095E437 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19655F76F90013D614FB2DD3 /* Pods-GreenR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

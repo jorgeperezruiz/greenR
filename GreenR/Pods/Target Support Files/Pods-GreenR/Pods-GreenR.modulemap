@@ -1,0 +1,6 @@
+module Pods_GreenR {
+  umbrella header "Pods-GreenR-umbrella.h"
+
+  export *
+  module * { export * }
+}

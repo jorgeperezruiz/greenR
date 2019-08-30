@@ -87,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Transport" translatesAutoresizingMaskIntoConstraints="NO" id="TNn-nB-tvL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Transport2" translatesAutoresizingMaskIntoConstraints="NO" id="TNn-nB-tvL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                         </subviews>
@@ -188,7 +188,7 @@
     <resources>
         <image name="DashIcon" width="25" height="28"/>
         <image name="Perks2" width="375" height="812"/>
-        <image name="Transport" width="375" height="812"/>
+        <image name="Transport2" width="375" height="812"/>
         <image name="Transporticon" width="21" height="25"/>
         <image name="badge" width="25" height="29"/>
         <image name="controls2" width="375" height="812"/>

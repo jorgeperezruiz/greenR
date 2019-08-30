@@ -62,6 +62,10 @@ class ViewController: UIViewController {
         line.valueColors = [UIColor.white]
         lineChart.drawBordersEnabled = false
         lineChart.drawGridBackgroundEnabled = false
+        lineChart.xAxis.drawLabelsEnabled = false
+        lineChart.xAxis.drawGridLinesEnabled = false
+        lineChart.rightAxis.drawLabelsEnabled = false
+        lineChart.rightAxis.drawGridLinesEnabled = false
     }
     
     func updateLineChart() {
@@ -80,7 +84,9 @@ class ViewController: UIViewController {
                 lineChartEntry.append(value)
             }
             line = LineChartDataSet(entries: lineChartEntry, label: "Kw/h")
-            line.circleRadius = 2
+        
+            line.colors = [UIColor.black]
+            line.circleRadius = 1
             data.addDataSet(line)
             lineChart.data = data
             return

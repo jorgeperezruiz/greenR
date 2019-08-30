@@ -18,7 +18,18 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wi7-JC-qFT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.4822541197240463" green="0.96187049150000004" blue="0.60768021194053889" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="wi7-JC-qFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6c-Sw-9Db"/>
+                            <constraint firstItem="wi7-JC-qFT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e8H-IO-G6L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wi7-JC-qFT" secondAttribute="bottom" id="gaC-Gy-3fQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wi7-JC-qFT" secondAttribute="trailing" id="io6-cy-M00"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" id="jTK-A6-DP1"/>
@@ -33,7 +44,18 @@
                     <view key="view" contentMode="scaleToFill" id="tE6-UV-a9E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tgh-9A-0EF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.48418771399999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="h53-G2-bhg" firstAttribute="trailing" secondItem="Tgh-9A-0EF" secondAttribute="trailing" id="0Rz-iy-2lO"/>
+                            <constraint firstItem="Tgh-9A-0EF" firstAttribute="leading" secondItem="h53-G2-bhg" secondAttribute="leading" id="1Lo-68-Ocj"/>
+                            <constraint firstItem="Tgh-9A-0EF" firstAttribute="top" secondItem="tE6-UV-a9E" secondAttribute="top" id="hmb-Ri-h1F"/>
+                            <constraint firstItem="h53-G2-bhg" firstAttribute="bottom" secondItem="Tgh-9A-0EF" secondAttribute="bottom" id="wcV-hY-SbJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h53-G2-bhg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Controls" id="7sC-O6-gn5"/>
@@ -49,7 +71,18 @@
                     <view key="view" contentMode="scaleToFill" id="AAZ-c8-8Jf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNn-nB-tvL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.13683506149999999" green="0.31321090930000001" blue="0.63747223980000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lco-Y4-siH" firstAttribute="bottom" secondItem="TNn-nB-tvL" secondAttribute="bottom" id="2G7-6E-vDD"/>
+                            <constraint firstItem="TNn-nB-tvL" firstAttribute="top" secondItem="AAZ-c8-8Jf" secondAttribute="top" id="F3f-eU-XPn"/>
+                            <constraint firstItem="lco-Y4-siH" firstAttribute="trailing" secondItem="TNn-nB-tvL" secondAttribute="trailing" id="Mi9-XD-iuA"/>
+                            <constraint firstItem="TNn-nB-tvL" firstAttribute="leading" secondItem="lco-Y4-siH" secondAttribute="leading" id="eMs-a9-Zbm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lco-Y4-siH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Transport" id="d4k-oV-s3c"/>
@@ -65,7 +98,18 @@
                     <view key="view" contentMode="scaleToFill" id="3nF-nl-2m2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-zC-Sqy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.85554478394369393" blue="0.41100788557797086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4aU-zC-Sqy" firstAttribute="leading" secondItem="o35-0s-DG1" secondAttribute="leading" id="6h9-T5-HjZ"/>
+                            <constraint firstItem="o35-0s-DG1" firstAttribute="trailing" secondItem="4aU-zC-Sqy" secondAttribute="trailing" id="HeR-0y-JHL"/>
+                            <constraint firstItem="4aU-zC-Sqy" firstAttribute="top" secondItem="3nF-nl-2m2" secondAttribute="top" id="cbc-FN-fo7"/>
+                            <constraint firstItem="o35-0s-DG1" firstAttribute="bottom" secondItem="4aU-zC-Sqy" secondAttribute="bottom" id="jHl-Wc-yHl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o35-0s-DG1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perks" id="NDH-hs-S09"/>

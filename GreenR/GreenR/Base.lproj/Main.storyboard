@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMT-ao-hFS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H9y-ml-bt0">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,21 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wi7-JC-qFT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="wi7-JC-qFT">
+                                <rect key="frame" x="0.0" y="14" width="414" height="799"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P61-NR-xwL" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="125" width="374" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P61-NR-xwL" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="40" y="161" width="334" height="133"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="BNS-lC-6gV"/>
+                                    <constraint firstAttribute="width" constant="334" id="LWA-tK-ghN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.87450980392156863" green="0.96078431372549022" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="wi7-JC-qFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6c-Sw-9Db"/>
-                            <constraint firstItem="wi7-JC-qFT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="deR-FQ-eKi"/>
+                            <constraint firstItem="P61-NR-xwL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XnM-Yw-LPk"/>
+                            <constraint firstItem="wi7-JC-qFT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-30" id="deR-FQ-eKi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wi7-JC-qFT" secondAttribute="bottom" id="gaC-Gy-3fQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wi7-JC-qFT" secondAttribute="trailing" id="io6-cy-M00"/>
+                            <constraint firstItem="P61-NR-xwL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="117" id="mae-po-RPf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -128,10 +133,38 @@
             </objects>
             <point key="canvasLocation" x="3205.7971014492755" y="82.366071428571431"/>
         </scene>
+        <!--LaunchVC View Controller-->
+        <scene sceneID="W7G-Ws-nXm">
+            <objects>
+                <viewController id="H9y-ml-bt0" customClass="launchVCViewController" customModule="GreenR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0HI-tD-BAG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="YjK-hU-WIE">
+                                <rect key="frame" x="56" y="342.5" width="302" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="Nog-6D-Apv"/>
+                                    <constraint firstAttribute="height" constant="111" id="cbq-Ww-wQl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.96078431372549022" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YjK-hU-WIE" firstAttribute="centerX" secondItem="0HI-tD-BAG" secondAttribute="centerX" id="H4N-De-fJZ"/>
+                            <constraint firstItem="YjK-hU-WIE" firstAttribute="centerY" secondItem="0HI-tD-BAG" secondAttribute="centerY" constant="-50" id="tj2-uq-PnE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gWv-SG-L96"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Plr-Ce-v6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2161" y="-1429"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i0U-nV-Bck">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cMT-ao-hFS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="cMT-ao-hFS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jXx-XF-Na7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -159,6 +192,8 @@
         <image name="Transporticon" width="21" height="25"/>
         <image name="badge" width="25" height="29"/>
         <image name="controls" width="375" height="812"/>
+        <image name="dashboard" width="375" height="812"/>
         <image name="ic_av_timer_24px" width="18" height="18"/>
+        <image name="logo" width="302" height="111"/>
     </resources>
 </document>

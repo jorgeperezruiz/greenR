@@ -17,40 +17,13 @@ class ViewController: UIViewController {
     let data = LineChartData()
     var line = LineChartDataSet()
     let network = Networking()
-    var devices: [Device]?
+    var devices = [Device]()
     let maximumDataPoints = 15
     
     var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        //        for i in counter...10 {
-        //            let value = ChartDataEntry(x:Double(i), y:Double(i+1))
-        //            lineChartEntry.append(value)
-        //        }
-        
-//        let dummyDevices = [ Device(name: "fan", power: Float(6.0), isOn: true, powerUsed: 9),
-//                             Device(name: "fan", power: Float(6.0), isOn: true, powerUsed: 9),
-//                             Device(name: "fan", power: Float(5.0), isOn: true, powerUsed: 9),
-//                             Device(name: "fan", power: Float(11.0), isOn: true, powerUsed: 9),
-//                             Device(name: "fan", power: Float(20.0), isOn: true, powerUsed: 9),
-//                             Device(name: "fan", power: Float(23.0), isOn: true, powerUsed: 9),
-//                             Device(name: "fan", power: Float(4.0), isOn: true, powerUsed: 9)]
-//
-//        for (index, device) in dummyDevices.enumerated() {
-//            let value = ChartDataEntry(x: Double(index + 1), y: Double(device.power))
-//            lineChartEntry.append(value)
-//        }
-//
-//        line = LineChartDataSet(entries: lineChartEntry, label: "Kw/h")
-        
-        //        lineChart.backgroundColor = UIColor.blue
-//        line.circleRadius = 2
-//        data.addDataSet(line)
-//        lineChart.data = data
-        
         setupLineChart()
         updateLineChart()
     }
@@ -70,35 +43,16 @@ class ViewController: UIViewController {
     
     func updateLineChart() {
         data.removeDataSet(line)
+        lineChartEntry = []
         
-        guard let devices = devices else { //If no data, dummy data is shown
-            let dummyDevices = [ Device(name: "fan", power: Float(6.0), isOn: true, powerUsed: 9),
-                                 Device(name: "fan", power: Float(6.0), isOn: true, powerUsed: 9),
-                                 Device(name: "fan", power: Float(5.0), isOn: true, powerUsed: 9),
-                                 Device(name: "fan", power: Float(11.0), isOn: true, powerUsed: 9),
-                                 Device(name: "fan", power: Float(20.0), isOn: true, powerUsed: 9),
-                                 Device(name: "fan", power: Float(23.0), isOn: true, powerUsed: 9),
-                                 Device(name: "fan", power: Float(4.0), isOn: true, powerUsed: 9)]
-            for (index, device) in dummyDevices.enumerated() {
-                let value = ChartDataEntry(x: Double(index + 1), y: Double(device.power))
-                lineChartEntry.append(value)
-            }
-            line = LineChartDataSet(entries: lineChartEntry, label: "Kw/h")
-        
-            line.colors = [UIColor.black]
-            line.circleRadius = 1
-            data.addDataSet(line)
-            lineChart.data = data
-            return
-        }
-        
-        
+        guard !devices.isEmpty else { return }
+    
         //If has data
         for (index, device) in devices.enumerated() {
-            let value = ChartDataEntry(x: Double(index + 1), y: Double(device.power))
+            let value = ChartDataEntry(x: Double(index), y: Double(device.power/1000))
             lineChartEntry.append(value)
         }
-        let latestData = Array(lineChartEntry.suffix(15))
+        let latestData = Array(lineChartEntry.suffix(maximumDataPoints))
         line = LineChartDataSet(entries: latestData, label: "Kw/h")
         line.circleRadius = 2
         data.addDataSet(line)
@@ -122,17 +76,22 @@ class ViewController: UIViewController {
     }
     
     func startReadingPower() {
-        timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(getDevice), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(getDevice), userInfo: nil, repeats: true)
+        getDevice()
     }
     
     @objc func getDevice() {
         print("getting device")
-        network.getDevice { result in
+        network.getDevice { [weak self] result in
             switch result {
             case .success(let device):
-                self.devices?.append(device)
-            case .failure(_):
-                print("Error getting device at \(Date())")
+                print("getDevice success")
+                DispatchQueue.main.async {
+                    self?.devices.append(device)
+                    self?.updateLineChart()
+                }
+            case .failure(let error):
+                print("Error getting device at \(Date()): \(error.localizedDescription)")
             }
         }
     }

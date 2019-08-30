@@ -41,12 +41,12 @@ protocol NetworkingContract {
 
 class Networking: NetworkingContract {
     
-    let baseURL = URL(string: "www.google.com")!
+    let baseURL = URL(string: "https://jb4lvatqze.execute-api.eu-west-1.amazonaws.com/prod")!
     let deviceComponent = "/devices"
     
     
     func getDevice(onCompletion: @escaping DeviceClosure) {
-        let pathComponents = deviceComponent + "/fan"
+        let pathComponents = deviceComponent + "/Fan"
         let endpoint = baseURL.appendingPathComponent(pathComponents)
         
         URLSession.shared.dataTask(withUrl: endpoint) { result in
@@ -69,7 +69,7 @@ class Networking: NetworkingContract {
         let pathComponents = deviceComponent + "/fan"
         let endpoint = baseURL.appendingPathComponent(pathComponents)
         
-//        let headersHelper = HeadersHelper(additionalHeaders: ["Content-Type": "application/json"])
+        let headers = ["Content-Type": "application/json"]
 
         
         var json = [String: Any]()
@@ -77,7 +77,7 @@ class Networking: NetworkingContract {
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         
-        URLSession.shared.dataTask(withUrl: endpoint, method: .put, jsonData: jsonData) { result in
+        URLSession.shared.dataTask(withUrl: endpoint, headerFields: headers, method: .put, jsonData: jsonData) { result in
             switch result {
             case .success(_, let data):
                 do {

@@ -17,7 +17,7 @@ class launchVCViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController")
             
-            self.present(tabBarVC, animated: true, completion: nil)
+            self.present(tabBarVC, animated: false, completion: nil)
         }
     }
     

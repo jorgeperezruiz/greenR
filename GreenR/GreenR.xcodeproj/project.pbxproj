@@ -12,10 +12,11 @@
 		287AEE7323191EE70095E437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7123191EE70095E437 /* Main.storyboard */; };
 		287AEE7523191EE80095E437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7423191EE80095E437 /* Assets.xcassets */; };
 		287AEE7823191EE80095E437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7623191EE80095E437 /* LaunchScreen.storyboard */; };
-		287AEE80231956010095E437 /* launchVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AEE7F231956010095E437 /* launchVCViewController.swift */; };
+		287AEE8223195A650095E437 /* launchVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AEE8123195A650095E437 /* launchVCViewController.swift */; };
 		CB73A8CE231922160037915E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8CD231922160037915E /* Networking.swift */; };
 		CB73A8D1231927960037915E /* URLSession+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8D0231927960037915E /* URLSession+Additions.swift */; };
 		CB73A8D52319296F0037915E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8D42319296F0037915E /* Device.swift */; };
+		CBA9A642231957AD0090A4DC /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA9A641231957AD0090A4DC /* ControlsViewController.swift */; };
 		FBE4128E4CD59AD65E4A0244 /* libPods-GreenR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BEB79EB3996C0CD39932E7 /* libPods-GreenR.a */; };
 /* End PBXBuildFile section */
 
@@ -27,11 +28,12 @@
 		287AEE7423191EE80095E437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287AEE7723191EE80095E437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		287AEE7923191EE80095E437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		287AEE7F231956010095E437 /* launchVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchVCViewController.swift; sourceTree = "<group>"; };
+		287AEE8123195A650095E437 /* launchVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchVCViewController.swift; sourceTree = "<group>"; };
 		7999E6D8EE57E8F39C361CAA /* Pods-GreenR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenR.release.xcconfig"; path = "Target Support Files/Pods-GreenR/Pods-GreenR.release.xcconfig"; sourceTree = "<group>"; };
 		CB73A8CD231922160037915E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		CB73A8D0231927960037915E /* URLSession+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Additions.swift"; sourceTree = "<group>"; };
 		CB73A8D42319296F0037915E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		CBA9A641231957AD0090A4DC /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
 		D9BEB79EB3996C0CD39932E7 /* libPods-GreenR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GreenR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80C441EB4A1ADFADBAF0502 /* Pods-GreenR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenR.debug.xcconfig"; path = "Target Support Files/Pods-GreenR/Pods-GreenR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +81,8 @@
 			children = (
 				287AEE6D23191EE70095E437 /* AppDelegate.swift */,
 				287AEE6F23191EE70095E437 /* ViewController.swift */,
-				287AEE7F231956010095E437 /* launchVCViewController.swift */,
+				287AEE8123195A650095E437 /* launchVCViewController.swift */,
+				CBA9A641231957AD0090A4DC /* ControlsViewController.swift */,
 				CB73A8CF2319278F0037915E /* Networking */,
 				287AEE7123191EE70095E437 /* Main.storyboard */,
 				287AEE7423191EE80095E437 /* Assets.xcassets */,
@@ -205,11 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287AEE8223195A650095E437 /* launchVCViewController.swift in Sources */,
 				CB73A8CE231922160037915E /* Networking.swift in Sources */,
 				287AEE7023191EE70095E437 /* ViewController.swift in Sources */,
+				CBA9A642231957AD0090A4DC /* ControlsViewController.swift in Sources */,
 				CB73A8D1231927960037915E /* URLSession+Additions.swift in Sources */,
 				CB73A8D52319296F0037915E /* Device.swift in Sources */,
-				287AEE80231956010095E437 /* launchVCViewController.swift in Sources */,
 				287AEE6E23191EE70095E437 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

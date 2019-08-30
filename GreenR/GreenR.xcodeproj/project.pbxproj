@@ -13,6 +13,7 @@
 		287AEE7523191EE80095E437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7423191EE80095E437 /* Assets.xcassets */; };
 		287AEE7823191EE80095E437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287AEE7623191EE80095E437 /* LaunchScreen.storyboard */; };
 		287AEE8223195A650095E437 /* launchVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AEE8123195A650095E437 /* launchVCViewController.swift */; };
+		287AEE8423195F130095E437 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AEE8323195F130095E437 /* CustomTabBarController.swift */; };
 		CB73A8CE231922160037915E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8CD231922160037915E /* Networking.swift */; };
 		CB73A8D1231927960037915E /* URLSession+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8D0231927960037915E /* URLSession+Additions.swift */; };
 		CB73A8D52319296F0037915E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB73A8D42319296F0037915E /* Device.swift */; };
@@ -29,6 +30,7 @@
 		287AEE7723191EE80095E437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		287AEE7923191EE80095E437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		287AEE8123195A650095E437 /* launchVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchVCViewController.swift; sourceTree = "<group>"; };
+		287AEE8323195F130095E437 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		7999E6D8EE57E8F39C361CAA /* Pods-GreenR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenR.release.xcconfig"; path = "Target Support Files/Pods-GreenR/Pods-GreenR.release.xcconfig"; sourceTree = "<group>"; };
 		CB73A8CD231922160037915E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		CB73A8D0231927960037915E /* URLSession+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Additions.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				287AEE6F23191EE70095E437 /* ViewController.swift */,
 				287AEE8123195A650095E437 /* launchVCViewController.swift */,
 				CBA9A641231957AD0090A4DC /* ControlsViewController.swift */,
+				287AEE8323195F130095E437 /* CustomTabBarController.swift */,
 				CB73A8CF2319278F0037915E /* Networking */,
 				287AEE7123191EE70095E437 /* Main.storyboard */,
 				287AEE7423191EE80095E437 /* Assets.xcassets */,
@@ -210,6 +213,7 @@
 			files = (
 				287AEE8223195A650095E437 /* launchVCViewController.swift in Sources */,
 				CB73A8CE231922160037915E /* Networking.swift in Sources */,
+				287AEE8423195F130095E437 /* CustomTabBarController.swift in Sources */,
 				287AEE7023191EE70095E437 /* ViewController.swift in Sources */,
 				CBA9A642231957AD0090A4DC /* ControlsViewController.swift in Sources */,
 				CB73A8D1231927960037915E /* URLSession+Additions.swift in Sources */,

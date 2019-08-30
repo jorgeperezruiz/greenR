@@ -176,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="2161" y="-1429"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="i0U-nV-Bck">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="cMT-ao-hFS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="cMT-ao-hFS" customClass="CustomTabBarController" customModule="GreenR" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jXx-XF-Na7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

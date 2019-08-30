@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.985507246377" y="83.705357142857139"/>
+            <point key="canvasLocation" x="1107" y="82"/>
         </scene>
         <!--Controls-->
         <scene sceneID="UL1-be-dN5">
@@ -114,7 +114,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Perks2" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-zC-Sqy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Perks" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-zC-Sqy">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                         </subviews>
@@ -187,7 +187,7 @@
     </scenes>
     <resources>
         <image name="DashIcon" width="25" height="28"/>
-        <image name="Perks2" width="375" height="812"/>
+        <image name="Perks" width="375" height="812"/>
         <image name="Transport2" width="375" height="812"/>
         <image name="Transporticon" width="21" height="25"/>
         <image name="badge" width="25" height="29"/>

@@ -35,7 +35,7 @@ public enum HTTPMethod: String {
 
 protocol NetworkingContract {
     func getDevice(onCompletion: @escaping DeviceClosure)
-    func turnDevice(on: Bool, onCompletion: @escaping PowerOnClosure)
+    func turnDevice(isOn: Bool, onCompletion: @escaping PowerOnClosure)
 }
 
 
@@ -65,7 +65,7 @@ class Networking: NetworkingContract {
     }
     
     
-    func turnDevice(on: Bool, onCompletion: @escaping PowerOnClosure) {
+    func turnDevice(isOn: Bool, onCompletion: @escaping PowerOnClosure) {
         let pathComponents = deviceComponent + "/fan"
         let endpoint = baseURL.appendingPathComponent(pathComponents)
         
@@ -73,7 +73,7 @@ class Networking: NetworkingContract {
 
         
         var json = [String: Any]()
-        json["isOn"] = on
+        json["isOn"] = isOn
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         
@@ -95,18 +95,35 @@ class Networking: NetworkingContract {
 }
 
 
-class presenter {
-    let network = Networking()
-    var device: Device?
-    
-    func dosomething() {
-        network.getDevice { result in
-            switch result {
-            case .success(let device):
-                self.device = device
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-}
+//class presenter {
+//    let network = Networking()
+//    var device: Device?
+//
+//
+//    var timer = Timer()
+//
+//    override func viewDidLoad() {
+//        scheduledTimerWithTimeInterval()
+//    }
+//
+//    func scheduledTimerWithTimeInterval(){
+//        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+//        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounting"), userInfo: nil, repeats: true)
+//    }
+//
+//    func updateCounting(){
+//        NSLog("counting..")
+//    }
+//
+//
+//    func dosomething() {
+//        network.getDevice { result in
+//            switch result {
+//            case .success(let device):
+//                self.device = device
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
+//}
